@@ -9,13 +9,13 @@ public class ChessMatch {
 	
 	private Board board;
 	
-	public ChessMatch() {
+	public ChessMatch() throws Exception {
 		board= new Board(8,8);
 		initialSetup();
 		
 		
 	}
-		public ChessPiece [][] getPieces() {
+		public ChessPiece [][] getPieces() throws Exception {
 			ChessPiece [][] mat= new ChessPiece[board.getLinhas()][board.getColunas()];
 			for (int i = 0; i <board.getLinhas(); i++) {
 				for (int j = 0; j < board.getColunas(); j++) {
@@ -27,8 +27,8 @@ public class ChessMatch {
 			
 		}
 		private void initialSetup() {
-			board.placePiece(new Rook(board,Cor.BLACK),new Position(2,1));
-			board.placePiece(new King(board,Cor.BLACK),new Position(3,1));
+			board.placePiece(new Rook(board,Cor.BLACK),new Position(3,1));
+			board.placePiece(new King(board,Cor.BLACK),new Position(4,1));
 			
 			
 			
